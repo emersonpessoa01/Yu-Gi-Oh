@@ -68,6 +68,10 @@
   border-width: 15px;
   padding: 12px;
 
+  /* added */
+  opacity: 0.6;
+  filter: alpha (opacity=50);
+
   /* internal border */
   box-sizing: border-box;
   -moz-box-sizing: border-box;
