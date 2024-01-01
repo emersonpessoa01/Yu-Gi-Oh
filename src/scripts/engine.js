@@ -17,6 +17,33 @@ const state = {
     button: document.getElementById("next-duel"),
   },
 };
+const pathImages = ".src/assets/icons";
+const cardData = [
+  {
+    id: 0,
+    name: "Blue Eyes White Dragon",
+    name: "Paper",
+    img: `${pathImages}/dragon.png`,
+    WindOf: [1],
+    LoseOf: [2],
+  },
+  {
+    id: 1,
+    name: "Dark Magician",
+    name: "Rock",
+    img: `${pathImages}/magician.png`,
+    WindOf: [2],
+    LoseOf: [0],
+  },
+  {
+    id: 2,
+    name: "Exodia",
+    name: "Scissors",
+    img: `${pathImages}/exodia.png`,
+    WindOf: [0],
+    LoseOf: [1],
+  },
+];
 
 function init() {}
 init();
