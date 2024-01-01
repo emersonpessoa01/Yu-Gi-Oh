@@ -69,8 +69,8 @@
   padding: 12px;
 
   /* added */
-  opacity: 0.6;
-  filter: alpha (opacity=50);
+  /* opacity: 0.6;
+  filter: alpha (opacity=50); */
 
   /* internal border */
   box-sizing: border-box;

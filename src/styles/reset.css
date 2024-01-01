@@ -9,5 +9,30 @@
   font-family: "Press Start 2P", cursive;
   -webkit-user-select: none;
 }
-
-
+:root{
+  --gold:#d27d2c;
+  --gold-clear:#d7b54c;
+}
+body{
+  position: relative;
+}
+html{
+  font-size:100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+html::-webkit-scrollbar{
+  width: 1rem;
+  height: .5rem;
+}
+html::-webkit-scrollbar-track{
+  background: inset 0 0 5px gray;
+}
+html::-webkit-scrollbar-thumb{
+  background: var(--gold);
+  border-radius: 5rem;
+  border:1px solid #fff;
+}
+html::-webkit-scrollbar-thumb:hover{
+  background: var(--gold-clear);
+}
