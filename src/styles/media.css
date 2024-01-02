@@ -1,6 +1,8 @@
 @media (max-width: 860px) {
   .container__left {
     width: 100%;
+    gap:1rem;
+
   }
   .container__right {
     width: 100%;
@@ -14,4 +16,5 @@
   .versus-top {
     flex-direction: column;
   }
+  
 }

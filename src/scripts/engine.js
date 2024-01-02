@@ -17,33 +17,35 @@ const state = {
     button: document.getElementById("next-duel"),
   },
 };
+
 const playerSides = {
   player1: "player-cards",
   computer: "computer-cards",
 };
-const pathImages = "./src/assets/icons";
+const pathImages = "./src/assets/icons/";
+
 const cardData = [
   {
     id: 0,
     name: "Blue Eyes White Dragon",
-    name: "Paper",
-    img: `${pathImages}/dragon.png`,
+    type: "Paper",
+    img: `${pathImages}dragon.png`,
     WindOf: [1],
     LoseOf: [2],
   },
   {
     id: 1,
     name: "Dark Magician",
-    name: "Rock",
-    img: `${pathImages}/magician.png`,
+    type: "Rock",
+    img: `${pathImages}magician.png`,
     WindOf: [2],
     LoseOf: [0],
   },
   {
     id: 2,
     name: "Exodia",
-    name: "Scissors",
-    img: `${pathImages}/exodia.png`,
+    type: "Scissors",
+    img: `${pathImages}exodia.png`,
     WindOf: [0],
     LoseOf: [1],
   },
@@ -52,30 +54,43 @@ async function getRandomCardId() {
   const randomIndex = Math.floor(Math.random() * cardData.length);
   return cardData[randomIndex].id;
 }
-async function createCardImage(IdCard, fielSide) {
+async function createCardImage(IdCard, fieldSide) {
   const cardImage = document.createElement("img");
   cardImage.setAttribute("height", "70px");
   cardImage.setAttribute("src", "./src/assets/icons/card-back.png");
   cardImage.setAttribute("data-id", IdCard);
   cardImage.classList.add("card");
 
-  if (fielSide === playerSides.player1) {
+  if (fieldSide === playerSides.player1) {
+    cardImage.addEventListener("mouseover", () => {
+      drawSelectCard(IdCard);
+    });
+
     cardImage.addEventListener("click", () => {
       setCardsField(cardImage.getAttribute("data-id"));
     });
   }
-  cardImage.addEventListener("mouseover", () => {
-    drawSelectCard(IdCard);
-  });
+  // cardImage.addEventListener("mouseover", () => {
+  //   drawSelectCard(IdCard);
+  // });
+
   return cardImage;
 }
+async function drawSelectCard(index) {
+  state.cardSprites.avatar.src = cardData[index].img;
+  // console.log(cardData[index].img)
+  state.cardSprites.name.innerHTML = cardData[index].name;
+  state.cardSprites.type.innerHTML = "Attribute: " + cardData[index].type;
+}
 
-async function drawCards(cardNumbers, fielSide) {
+async function drawCards(cardNumbers, fieldSide) {
   for (let i = 0; i < cardNumbers; i++) {
     const randomIdCard = await getRandomCardId();
-    const cardImage = await createCardImage(randomIdCard, fielSide);
+    const cardImage = await createCardImage(randomIdCard, fieldSide);
 
-    document.getElementById(fielSide).appendChild(cardImage);
+    // console.log(cardImage)
+
+    document.getElementById(fieldSide).appendChild(cardImage);
   }
 }
 

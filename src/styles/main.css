@@ -69,6 +69,12 @@
 #card-type {
   font-size: 1rem;
 }
+.card{
+  transition: all .3s ease-in-out;
+}
+.card:hover{
+  transform: scale(1.2);
+}
 /* container à esquerda */
 
 /* container à direita */
@@ -111,12 +117,13 @@
   align-items: center;
   justify-content: space-around;
 }
+.card-box img:hover{
+  cursor: pointer;
+}
 .card-infield{
  width: 8rem; 
  height: 11.2rem;
  border-radius: 8px;
 }
-
-
 
 /* container à direita */
