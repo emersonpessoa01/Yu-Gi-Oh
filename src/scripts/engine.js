@@ -27,7 +27,6 @@ const state = {
 const playerSides = {
   player1: "player-cards",
   computer: "computer-cards",
- 
 };
 const pathImages = "./src/assets/icons/";
 
@@ -95,13 +94,36 @@ async function setCardsField(cardId) {
   state.fieldCards.computer.src = cardData[computerCarId].img;
   console.log(state.fieldCards.computer.src);
 
-  // let duelResults = await checkDuelResults(cardId,computerCarId)
+  let duelResults = await checkDuelResults(cardId, computerCarId);
 
-  // await updateScore();
-  // await drawButton(duelResults)
+  await updateScore();
+  await drawButton(duelResults);
+}
+
+async function drawButton(text) {
+  state.actions.button.innerText = text;
+  state.actions.button.style.display = "block";
+}
+async function updateScore() {
+  state.score.scoreBox.innerHTML = `Win: ${state.score.playerScore} | Lose:${state.score.computerScore} `;
+}
+
+async function checkDuelResults(playerCardId, computerCardId) {
+  let duelResults = "Empate";
+  let playerCard = cardData[playerCardId];
+
+  if (playerCard.WindOf.includes(computerCardId)) {
+    duelResults = "Ganhou";
+    state.score.playerScore++;
+  }
+  if (playerCard.LoseOf.includes(computerCardId)) {
+    duelResults = "Perdeu";
+    state.score.playerScore++;
+  }
+  return duelResults;
 }
 async function removeAllCardsImages() {
-  let {computerBOX,player1BOX} = state.playerSides;
+  let { computerBOX, player1BOX } = state.playerSides;
   let imgElements = computerBOX.querySelectorAll("img");
   imgElements.forEach((img) => img.remove());
 
