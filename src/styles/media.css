@@ -14,7 +14,7 @@
 }
 @media (max-width: 480px) {
   .versus-top {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
   
 }
