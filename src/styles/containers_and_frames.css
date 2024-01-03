@@ -20,7 +20,8 @@
   border-image-slice: 6 6 6 6;
   border-image-width: 18px;
   border-width: 15px;
-  padding: 12px;
+  /* padding: 12px; */
+  padding: 4rem;
 
   /* internal border */
   box-sizing: border-box;
