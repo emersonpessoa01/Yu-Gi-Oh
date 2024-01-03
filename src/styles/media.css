@@ -16,5 +16,8 @@
   .versus-top {
     /* flex-direction: column; */
   }
-  
+  #score_points{
+    font-size: .8rem;
+    display: block;
+  }
 }
