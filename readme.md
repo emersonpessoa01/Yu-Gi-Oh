@@ -10,7 +10,7 @@ Conceitos abordados:
 
 ### Entrega do Desafio Final sugerido pela DIO : Potência Tech iFood - Desenvolvimento de Jogos
 
- [Clique aqui](https://yu-gi-oh-desafio-final.vercel.app/) para acessar o resultado final do jogo criada a partir do desafio!
+ [Clique aqui](https://yu-gi-oh-desafio-final.vercel.app/) para acessar o resultado final do jogo criado a partir do desafio!
 
 <p align="center">
   <img src="./src/assets\/image/readme.png" alt="Imagem do Jogo Yu-Gi-Oh" width="100%">
