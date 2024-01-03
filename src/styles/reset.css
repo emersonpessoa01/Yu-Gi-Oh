@@ -15,6 +15,7 @@
 body {
   position: relative;
   cursor: url("../assets/cursor/yugicursor.png"), default;
+  height: auto;
 }
 button,
 a,
@@ -26,6 +27,7 @@ html {
   font-size: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
+  overflow-x: hidden;
 }
 html::-webkit-scrollbar {
   width: 1rem;
