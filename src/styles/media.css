@@ -17,7 +17,7 @@
     display: flex;
     gap: 0.2rem;
     padding: 2rem;
-    margin: .5rem 0;
+    /* margin: .5rem 0; */
   }
 }
 @media (max-width: 480px) {
@@ -34,7 +34,6 @@
     font-size:.8rem;
   }
   .card-infield {
-    max-width: 10rem;
     padding: 0 8px;
   }
 }
