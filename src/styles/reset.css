@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;300;400;500;600;700&family=Press+Start+2P&family=Roboto:wght@100;300;400;500;700&display=swap");
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,31 +8,38 @@
   font-family: "Press Start 2P", cursive;
   -webkit-user-select: none;
 }
-:root{
-  --gold:#d27d2c;
-  --gold-clear:#d7b54c;
+:root {
+  --gold: #d27d2c;
+  --gold-clear: #d7b54c;
 }
-body{
+body {
   position: relative;
+  cursor: url("../assets/cursor/yugicursor.png"), default;
 }
-html{
+button,
+a,
+img,
+:is(button,a,img):hover {
+  cursor: url("../assets/cursor/yamiyugicursorGLOW.png"), auto !important;
+}
+html {
   font-size: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
 }
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
   width: 1rem;
-  height: .5rem;
+  height: 0.5rem;
 }
-html::-webkit-scrollbar-track{
+html::-webkit-scrollbar-track {
   background: inset 0 0 5px gray;
 }
-html::-webkit-scrollbar-thumb{
-  background:var(--gold);
+html::-webkit-scrollbar-thumb {
+  background: var(--gold);
   border-radius: 5rem;
   border: 1px solid #fff;
 }
-html::-webkit-scrollbar-thumb:hover{
-  background: linear-gradient(to right,var(--gold),var(--gold-clear));
+html::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, var(--gold), var(--gold-clear));
   cursor: pointer !important;
 }

@@ -75,6 +75,7 @@
 }
 .card:hover {
   transform: scale(1.2);
+  
 }
 /* container à esquerda */
 
@@ -123,7 +124,7 @@
   justify-content: space-around;
 }
 .card-box img:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .card-infield {
   width: 125px;
