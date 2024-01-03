@@ -189,10 +189,12 @@ async function playAudio(status) {
 }
 
 function init() {
-  state.fieldCards.player.style.display = "none";
-  state.fieldCards.computer.style.display = "none";
+  showHiddenCardFieldsImages(false);
   drawCards(5, playerSides.player1);
   drawCards(5, playerSides.computer);
   setCardsField();
+  
+  const bgm = document.getElementById("bgm");
+  bgm.play();
 }
 init();
