@@ -1,9 +1,17 @@
-# Yu-Gi-Oh | Jo-ken-po Edition
+# <p align="center"> Yu-Gi-Oh | Jo-ken-po </p>
 
-Jogo de jokenpo que criei para explicar conceitos de lógica de programação aplicados a jogos
+<!-- ## Jogo de jokenpo criado para explanar conceitos de lógica de programação aplicados a jogos</p> -->
 
-conceitos abordados:
+Conceitos abordados:
 
 - Armazenamento e gerenciamento de estado manual
 - Funções limpas
 - Organização de código
+
+### Entrega do Desafio Final sugerido pela DIO : Potência Tech iFood - Desenvolvimento de Jogos
+
+ [Clique aqui](https://yu-gi-oh-desafio-final.vercel.app/) para acessar o resultado final do jogo criada a partir do desafio!
+
+<p align="center">
+  <img src="./src/assets\/image/readme.png" alt="Imagem do Jogo Yu-Gi-Oh" width="100%">
+</p>
