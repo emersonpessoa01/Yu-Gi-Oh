@@ -15,7 +15,6 @@
 body {
   position: relative;
   cursor: url("../assets/cursor/yugicursor.png"), default;
-  height:100%;
 }
 button,
 a,
@@ -24,7 +23,7 @@ img,
   cursor: url("../assets/cursor/yamiyugicursorGLOW.png"), auto !important;
 }
 html {
-  font-size: 62.5%;
+  font-size: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: 4rem;
 }
